@@ -1,0 +1,6 @@
+== SimplyInsured Work Sample
+
+This is a small (incomplete) Rails app build during the SimplyInsured interview. Here's a reminder of what we worked on:
+
+* `db/schema.rb` shows the database schema we worked up
+* `app/models/plan.rb` shows the `calculate_price` function that takes in an array of `ages` and `zipcodes` to calculate the total price for a company 
