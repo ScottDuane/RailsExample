@@ -15,13 +15,14 @@ plans = [plan_1, plan_2, plan_3, plan_4]
 (1..100).each do |age|
   (1..1).each do |region|
     plans.each do |plan|
-      rand_price = rand(500)
-      price = Price.create!({plan_id: plan.id, monthly_premium: rand_price, region: region, age: age })
+      rand_price = rand(500).to_i
+      price = Price.create!({plan_id: plan.id, region: region, age: age, monthly_premium: rand_price})
     end
   end
 end
 
+zipcodes = [94150, 94606, 92116, 94610, 95221, 95222, 95223, 95224]
 
-[95221, 95222, 95223, 95224].each do |zip_code|
-  Region.create!(zip_code: zip_code, region: 1)
+zipcodes.each do |zip_code|
+  Region.create!({zip_code: zip_code, region: 1})
 end

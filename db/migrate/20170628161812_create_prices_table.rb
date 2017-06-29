@@ -4,7 +4,7 @@ class CreatePricesTable < ActiveRecord::Migration
       t.integer :plan_id, null: false, index: true
       t.integer :age, null: false
       t.integer :region, null: false
-      t.float :monthly_premium, null: false
+      t.integer :monthly_premium
     end
   end
 end

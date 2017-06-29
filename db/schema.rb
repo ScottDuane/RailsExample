@@ -24,14 +24,14 @@ ActiveRecord::Schema.define(version: 20170628164218) do
     t.integer "plan_id",         null: false
     t.integer "age",             null: false
     t.integer "region",          null: false
-    t.float   "monthly_premium", null: false
+    t.integer "monthly_premium"
   end
 
   add_index "prices", ["plan_id"], name: "index_prices_on_plan_id"
 
   create_table "regions", force: :cascade do |t|
-    t.integer "zip_code", null: false
-    t.integer "region",   null: false
+    t.integer "zip_code"
+    t.integer "region"
   end
 
   create_table "users", force: :cascade do |t|
